@@ -14,3 +14,11 @@ jobs:
 
       - name: Fetch Trader Page
         run: curl https://encora.it/traders/vndyne > trader.html
+
+      - name: Commit Update
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add trader.html
+          git commit -m "Update trader data" || echo "No changes"
+          git push
