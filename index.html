@@ -1,39 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Encora Trader Monitor</title>
+<link rel="stylesheet" href="styles.css">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<style>
-body{
-font-family: Arial;
-background:#0b1c3d;
-color:white;
-text-align:center;
-}
-
-.container{
-width:80%;
-margin:auto;
-}
-
-table{
-width:100%;
-margin-top:20px;
-border-collapse:collapse;
-}
-
-th,td{
-border:1px solid #444;
-padding:10px;
-}
-
-th{
-background:#1e3a8a;
-}
-</style>
-
 </head>
 
 <body>
@@ -41,11 +13,8 @@ background:#1e3a8a;
 <h1>Encora Trader Monitor</h1>
 <h2>Trader: vndyne</h2>
 
-<div class="container">
+<table id="trades" border="1">
 
-<canvas id="profitChart"></canvas>
-
-<table id="trades">
 <thead>
 <tr>
 <th>Pair</th>
@@ -54,13 +23,15 @@ background:#1e3a8a;
 </tr>
 </thead>
 
-<tbody></tbody>
+<tbody>
+</tbody>
 
 </table>
 
-</div>
+<canvas id="profitChart"></canvas>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
